@@ -7,4 +7,4 @@
 * MongoDB 
 
 ### 🪄 to run this project 
-### it is necessary to have npm installed and database mongodb service executing then run the command to install the libraries"npm init" 
+### it is necessary to have npm installed and database mongodb service executing then run the command to init project "npm init -y" and install the libraries "npm i" 
