@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h2>Alterar Pessoa</h2>
+    <form action="/pessoa/<%= pessoa._id %>?_method=PUT" method="post">
+        <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome">
+        <label for="email">Email: </label>
+            <input type="text" name="email" id="email">
+        <label for="cpf">CPF: </label>
+            <input type="text" name="cpf" id="cpf">
+    <br><br>
+        <button type="submit">Alterar</button>
+    </form>
+    <br>
+    <a href="/pessoa/<%=pessoa._id%>">
+        <button>Voltar</button>
+    </a>
+</body>
+</html>

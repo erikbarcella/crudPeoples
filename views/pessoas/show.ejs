@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <% if (pessoa) { %>
+        <h2>Detalhes do pessoa:</h2>
+        <p>Nome: <%= pessoa.nome %></p>
+        <p>Email: <b><%= pessoa.email %></b></p>
+        <p>CPF: <b><%= pessoa.cpf %></b></p>
+        <br/>
+        <a href="/pessoa">
+            <button>Voltar</button>
+        </a>
+        <br>
+        <br>
+        <a href="/pessoa/<%=pessoa._id%>/edit">
+            <button>Alterar</button>
+        </a>
+        <br>
+        <br>
+        <form action="/pessoa/<%= pessoa._id %>?_method=DELETE" method="post">
+            <button>Deletar</button>
+        </form>
+        
+    <%} else {%>
+        <p>Não foi encontrado nenhuma pessoa com esse id.</p>
+    <%}%>
+</body>
+</html>
